@@ -1,0 +1,819 @@
+fileFormatVersion: 2
+guid: bf0c9e810c6588942b58c14c417a7d74
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4477262005137797346
+    second: Sheep_three_0
+  - first:
+      213: 1825151515908857834
+    second: Sheep_three_1
+  - first:
+      213: 1969649277190269475
+    second: Sheep_three_2
+  - first:
+      213: -8808574753130144772
+    second: Sheep_three_3
+  - first:
+      213: 6376946240112890656
+    second: Sheep_three_4
+  - first:
+      213: 4298697986036462312
+    second: Sheep_three_5
+  - first:
+      213: 2153088304176155120
+    second: Sheep_three_6
+  - first:
+      213: -4739803100920374701
+    second: Sheep_three_7
+  - first:
+      213: 2671525902938626246
+    second: Sheep_three_8
+  - first:
+      213: 8478383097941078584
+    second: Sheep_three_9
+  - first:
+      213: -3532059584715501033
+    second: Sheep_three_10
+  - first:
+      213: -3976230040590728926
+    second: Sheep_three_11
+  - first:
+      213: 5099363559982412135
+    second: Sheep_three_12
+  - first:
+      213: -6074283061602840772
+    second: Sheep_three_13
+  - first:
+      213: -8633067713763472007
+    second: Sheep_three_14
+  - first:
+      213: 9005727061443516941
+    second: Sheep_three_15
+  - first:
+      213: 350885084815834898
+    second: Sheep_three_16
+  - first:
+      213: 525873113556626814
+    second: Sheep_three_17
+  - first:
+      213: 2926121569012177359
+    second: Sheep_three_18
+  - first:
+      213: 5887900516045541677
+    second: Sheep_three_19
+  - first:
+      213: -7442560897332186745
+    second: Sheep_three_20
+  - first:
+      213: 9114757513291991897
+    second: Sheep_three_21
+  - first:
+      213: -2083860927154438454
+    second: Sheep_three_22
+  - first:
+      213: 3266790015900857066
+    second: Sheep_three_23
+  - first:
+      213: -8788663510588842672
+    second: Sheep_three_24
+  - first:
+      213: 6909573908912053947
+    second: Sheep_three_25
+  - first:
+      213: -8380317902805506262
+    second: Sheep_three_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sheep_three_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 98
+        width: 53
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1f88698de19dd1c0800000000000000
+      internalID: -4477262005137797346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheep_three_1
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 103
+        width: 53
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aef530732ad345910800000000000000
+      internalID: 1825151515908857834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheep_three_2
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 100
+        width: 53
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32ae70bf499955b10800000000000000
+      internalID: 1969649277190269475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheep_three_3
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 89
+        width: 53
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfb143e8ee7a1c580800000000000000
+      internalID: -8808574753130144772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheep_three_4
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 2
+        width: 55
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02311b1a1d67f7850800000000000000
+      internalID: 6376946240112890656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheep_three_5
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 98
+        width: 53
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e2f366fa0b08ab30800000000000000
+      internalID: 4298697986036462312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheep_three_6
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 103
+        width: 53
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f9c774b76e41ed10800000000000000
+      internalID: 2153088304176155120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheep_three_7
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 100
+        width: 53
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35a98583136d83eb0800000000000000
+      internalID: -4739803100920374701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheep_three_8
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 89
+        width: 53
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c859e487aa231520800000000000000
+      internalID: 2671525902938626246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheep_three_9
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 2
+        width: 58
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8323476d18449a570800000000000000
+      internalID: 8478383097941078584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheep_three_10
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 98
+        width: 53
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 712d487758a9bfec0800000000000000
+      internalID: -3532059584715501033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheep_three_11
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 103
+        width: 53
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2214a5558d791d8c0800000000000000
+      internalID: -3976230040590728926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheep_three_12
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 100
+        width: 53
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 761b255e32494c640800000000000000
+      internalID: 5099363559982412135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheep_three_13
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 89
+        width: 53
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3f8df70dbfc3bba0800000000000000
+      internalID: -6074283061602840772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheep_three_14
+      rect:
+        serializedVersion: 2
+        x: 988
+        y: 2
+        width: 59
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97d0c3f77ae213880800000000000000
+      internalID: -8633067713763472007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheep_three_15
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 2
+        width: 53
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0a96794c05cafc70800000000000000
+      internalID: 9005727061443516941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheep_three_16
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 2
+        width: 53
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21f3e6520289ed400800000000000000
+      internalID: 350885084815834898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheep_three_17
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 2
+        width: 53
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7da8728fc64c4700800000000000000
+      internalID: 525873113556626814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheep_three_18
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 2
+        width: 53
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc95492501cab9820800000000000000
+      internalID: 2926121569012177359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheep_three_19
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 2
+        width: 53
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d21dbbbe25606b150800000000000000
+      internalID: 5887900516045541677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheep_three_20
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 2
+        width: 53
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7817d47db46b6b890800000000000000
+      internalID: -7442560897332186745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheep_three_21
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 2
+        width: 53
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95b87919aaf1e7e70800000000000000
+      internalID: 9114757513291991897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheep_three_22
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 2
+        width: 52
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aceb4ab0783a413e0800000000000000
+      internalID: -2083860927154438454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheep_three_23
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 2
+        width: 57
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae230951638f55d20800000000000000
+      internalID: 3266790015900857066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheep_three_24
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 2
+        width: 56
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05d1ae8f915680680800000000000000
+      internalID: -8788663510588842672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheep_three_25
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 2
+        width: 57
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbe92069cdcb3ef50800000000000000
+      internalID: 6909573908912053947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheep_three_26
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 2
+        width: 56
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a276e6aa44123bb80800000000000000
+      internalID: -8380317902805506262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Sheep_three_0: -4477262005137797346
+      Sheep_three_1: 1825151515908857834
+      Sheep_three_10: -3532059584715501033
+      Sheep_three_11: -3976230040590728926
+      Sheep_three_12: 5099363559982412135
+      Sheep_three_13: -6074283061602840772
+      Sheep_three_14: -8633067713763472007
+      Sheep_three_15: 9005727061443516941
+      Sheep_three_16: 350885084815834898
+      Sheep_three_17: 525873113556626814
+      Sheep_three_18: 2926121569012177359
+      Sheep_three_19: 5887900516045541677
+      Sheep_three_2: 1969649277190269475
+      Sheep_three_20: -7442560897332186745
+      Sheep_three_21: 9114757513291991897
+      Sheep_three_22: -2083860927154438454
+      Sheep_three_23: 3266790015900857066
+      Sheep_three_24: -8788663510588842672
+      Sheep_three_25: 6909573908912053947
+      Sheep_three_26: -8380317902805506262
+      Sheep_three_3: -8808574753130144772
+      Sheep_three_4: 6376946240112890656
+      Sheep_three_5: 4298697986036462312
+      Sheep_three_6: 2153088304176155120
+      Sheep_three_7: -4739803100920374701
+      Sheep_three_8: 2671525902938626246
+      Sheep_three_9: 8478383097941078584
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
