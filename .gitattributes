@@ -183,4 +183,10 @@ LightingData.asset     binary
 *.css linguist-vendored
 *.js linguist-vendored
 
+# Catch any remaining Unity/cg graphics files
+*.cginc linguist-vendored
+*.glsl linguist-vendored
+*.gsh linguist-vendored
+*.vsh linguist-vendored
+
 
