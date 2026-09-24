@@ -170,10 +170,17 @@ Packages/packages-lock.json linguist-generated
 # Exceptions for .asset files such as lightning pre-baking
 LightingData.asset     binary
 
-# Ignore all Unity shader and graphics files from language stats
+# Ignore all shader, HLSL, and graphics files
 *.shader linguist-vendored
 *.shadergraph linguist-vendored
 *.shadersubgraph linguist-vendored
 *.hlsl linguist-vendored
 *.compute linguist-vendored
+
+# Ignore documentation, web templates, and HTML files
+*.html linguist-vendored
+*.htm linguist-vendored
+*.css linguist-vendored
+*.js linguist-vendored
+
 
