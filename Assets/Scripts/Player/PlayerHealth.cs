@@ -1,75 +1,77 @@
 using UnityEngine;
-using UnityEngine.UI; 
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [Header("Santé")]
-    public float vieMax = 100f;
-    public float vieActuelle;
-
-    [Tooltip("Combien de points de vie perdus par mètre parcouru ?")]
-    public float degatsParMetre = 1f;
+    [Header("Santé (Points de Vie)")]
+    public float santeMax = 100f;
+    public float santeActuelle;
 
     [Header("Interface Visuelle")]
-    [Tooltip("Glisse le Slider de la scène ici !")]
-    public Slider barreDeVie; // C'est ici qu'on va lier la jauge
+    [Tooltip("Glisse le Slider de Santé ici")]
+    public Slider barreDeSante;
 
-    private Vector3 dernierePosition;
+    private PlayerMouvement joueurMouvement;
+    private bool estMort = false;
 
     private void Start()
     {
-        vieActuelle = vieMax;
-        dernierePosition = transform.position;
+        santeActuelle = santeMax;
 
-        // Initialisation de la barre de vie à l'écran
-        if (barreDeVie != null)
+        if (barreDeSante != null)
         {
-            barreDeVie.maxValue = vieMax;
-            barreDeVie.value = vieActuelle;
-        }
-    }
-
-    private void Update()
-    {
-        // On calcule la distance
-        float distanceParcourue = Vector3.Distance(transform.position, dernierePosition);
-
-        // Si le joueur marche, il tombe malade
-        if (distanceParcourue > 0.001f)
-        {
-            PrendreDegats(distanceParcourue * degatsParMetre);
+            barreDeSante.maxValue = santeMax;
+            barreDeSante.value = santeActuelle;
         }
 
-        dernierePosition = transform.position;
+        joueurMouvement = GetComponent<PlayerMouvement>();
     }
 
     public void PrendreDegats(float montant)
     {
-        vieActuelle -= montant;
+        if (estMort) return;
 
-        // Dès qu'on prend des dégâts, on baisse la jauge à l'écran !
-        if (barreDeVie != null)
+        santeActuelle -= montant;
+        if (santeActuelle < 0f) santeActuelle = 0f;
+
+        if (barreDeSante != null)
         {
-            barreDeVie.value = vieActuelle;
+            barreDeSante.value = santeActuelle;
         }
 
-        if (vieActuelle <= 0)
+        if (joueurMouvement != null)
         {
-            vieActuelle = 0;
-            Debug.Log("Le médecin a succombé à la peste...");
-            GetComponent<PlayerMouvement>().Mourir();
+            joueurMouvement.PrendreDegats();
+        }
+
+        if (santeActuelle <= 0f)
+        {
+            Mourir();
         }
     }
 
     public void Soigner(float montant)
     {
-        vieActuelle += montant;
-        if (vieActuelle > vieMax) vieActuelle = vieMax;
+        if (estMort) return;
 
-        // Dès qu'on se soigne, on remonte la jauge à l'écran !
-        if (barreDeVie != null)
+        santeActuelle += montant;
+        if (santeActuelle > santeMax) santeActuelle = santeMax;
+
+        if (barreDeSante != null)
         {
-            barreDeVie.value = vieActuelle;
+            barreDeSante.value = santeActuelle;
+        }
+    }
+
+    private void Mourir()
+    {
+        if (estMort) return;
+        estMort = true;
+        Debug.Log("Le médecin a succombé à ses blessures...");
+
+        if (joueurMouvement != null)
+        {
+            joueurMouvement.Mourir();
         }
     }
 }
