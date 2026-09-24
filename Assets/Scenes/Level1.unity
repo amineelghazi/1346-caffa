@@ -426,7 +426,7 @@ GameObject:
   - component: {fileID: 648055271}
   - component: {fileID: 648055270}
   - component: {fileID: 648055269}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1640,7 +1640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   vitesse: 5
-  forceSaut: 10
+  forceSaut: 5
   coucheSol:
     serializedVersion: 2
     m_Bits: 8
