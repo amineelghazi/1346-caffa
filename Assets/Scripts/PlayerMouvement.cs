@@ -1,115 +1,172 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
 public class PlayerMouvement : MonoBehaviour
 {
+    private static class ParametresAnimateur
+    {
+        public static readonly int Vitesse = Animator.StringToHash("Speed");        // float
+        public static readonly int AuSol = Animator.StringToHash("IsGrounded");     // bool
+        public static readonly int VitesseY = Animator.StringToHash("VelocityY");   // float
+        public static readonly int Attaque = Animator.StringToHash("Attack");       // trigger
+        public static readonly int Degats = Animator.StringToHash("Damage");        // trigger
+        public static readonly int Mort = Animator.StringToHash("Death");           // trigger
+    }
+
+    private const string AxeHorizontal = "Horizontal";
+    private const string BoutonSaut = "Jump";
+    private const string BoutonAttaque = "Fire1";
+    private const float RatioLargeurDetectionSol = 0.9f;
+
     [Header("Déplacement")]
     [SerializeField] private float vitesse = 5f;
     [SerializeField] private float forceSaut = 10f;
 
     [Header("Détection du sol")]
-    [SerializeField] private Transform verificationSol;   // enfant vide placé aux pieds
-    [SerializeField] private float rayonSol = 0.15f;
     [SerializeField] private LayerMask coucheSol;
+    [SerializeField] private float epaisseurDetectionSol = 0.1f;
 
     [Header("Sprite")]
     [Tooltip("Coche si le sprite du corbeau regarde vers la droite dans l'image d'origine.")]
     [SerializeField] private bool regardeADroiteParDefaut = true;
 
     private Rigidbody2D corps;
+    private Collider2D collisionneur;
     private Animator animateur;
     private SpriteRenderer rendu;
 
-    private float horizontal;
-    private bool auSol;
+    private float direction;
+    private bool estAuSol;
     private bool sautDemande;
-    private bool mort;
-
-    // Noms des paramètres de l'Animator (à créer dans la fenêtre Animator > Parameters)
-    private static readonly int ParamVitesse = Animator.StringToHash("Speed");      // float
-    private static readonly int ParamAuSol = Animator.StringToHash("IsGrounded"); // bool
-    private static readonly int ParamVitesseY = Animator.StringToHash("VelocityY");  // float
-    private static readonly int ParamAttaque = Animator.StringToHash("Attack");     // trigger
-    private static readonly int ParamDegats = Animator.StringToHash("Damage");     // trigger
-    private static readonly int ParamMort = Animator.StringToHash("Death");      // trigger
+    private bool estMort;
 
     private void Awake()
     {
         corps = GetComponent<Rigidbody2D>();
+        collisionneur = GetComponent<Collider2D>();
         animateur = GetComponentInChildren<Animator>();
         rendu = GetComponentInChildren<SpriteRenderer>();
+
+        VerifierConfiguration();
     }
 
     private void Update()
     {
-        if (mort)
-        {
-            horizontal = 0f;
-            return;
-        }
+        if (estMort) return;
 
-        // Lecture des commandes (horizontal seulement : c'est un plateformer)
-        horizontal = Input.GetAxisRaw("Horizontal");
-
-        if (Input.GetButtonDown("Jump") && auSol)
-            sautDemande = true;
-
-        if (Input.GetButtonDown("Fire1"))
-            animateur.SetTrigger(ParamAttaque);
-
-        // Retourner le sprite selon la direction
-        if (horizontal != 0f)
-        {
-            bool versGauche = horizontal < 0f;
-            rendu.flipX = regardeADroiteParDefaut ? versGauche : !versGauche;
-        }
-
+        LireCommandes();
+        OrienterSprite();
         MettreAJourAnimations();
     }
 
     private void FixedUpdate()
     {
-        Vector2 position = verificationSol != null ? (Vector2)verificationSol.position : corps.position;
-        auSol = Physics2D.OverlapCircle(position, rayonSol, coucheSol);
+        if (estMort) return;
 
-        // On modifie la vitesse au lieu d'utiliser MovePosition : la gravité continue de s'appliquer.
-        // (Unity 6 : linearVelocity. Sur les anciennes versions, remplace par velocity.)
-        Vector2 v = corps.linearVelocity;
-        v.x = horizontal * vitesse;
-
-        if (sautDemande && auSol)
-            v.y = forceSaut;
-
-        sautDemande = false;
-        corps.linearVelocity = v;
-    }
-
-    private void MettreAJourAnimations()
-    {
-        animateur.SetFloat(ParamVitesse, Mathf.Abs(horizontal));
-        animateur.SetBool(ParamAuSol, auSol);
-        animateur.SetFloat(ParamVitesseY, corps.linearVelocity.y);
+        estAuSol = DetecterSol();
+        AppliquerMouvement();
     }
 
     // À appeler depuis d'autres scripts (ennemis, pièges...)
     public void PrendreDegats()
     {
-        if (mort) return;
-        animateur.SetTrigger(ParamDegats);
+        if (estMort) return;
+
+        animateur.SetTrigger(ParametresAnimateur.Degats);
     }
 
     public void Mourir()
     {
-        if (mort) return;
-        mort = true;
+        if (estMort) return;
+
+        estMort = true;
+        direction = 0f;
         corps.linearVelocity = Vector2.zero;
-        animateur.SetTrigger(ParamMort);
+        animateur.SetTrigger(ParametresAnimateur.Mort);
+    }
+
+    private void LireCommandes()
+    {
+        // Lecture de la direction de déplacement
+        direction = Input.GetAxisRaw(AxeHorizontal);
+
+        // Attaque
+        if (Input.GetButtonDown(BoutonAttaque))
+        {
+            animateur.SetTrigger(ParametresAnimateur.Attaque);
+        }
+
+        // Saut
+        if (Input.GetButtonDown(BoutonSaut))
+        {
+            sautDemande = true;
+        }
+    }
+
+    private void OrienterSprite()
+    {
+        if (direction == 0f) return;
+
+        bool versGauche = direction < 0f;
+        rendu.flipX = regardeADroiteParDefaut ? versGauche : !versGauche;
+    }
+
+    private void AppliquerMouvement()
+    {
+        Vector2 vitesseActuelle = corps.linearVelocity;
+        vitesseActuelle.x = direction * vitesse;
+
+        if (sautDemande && estAuSol)
+        {
+            vitesseActuelle.y = forceSaut;
+        }
+
+        sautDemande = false;
+        corps.linearVelocity = vitesseActuelle;
+    }
+
+    private bool DetecterSol()
+    {
+        Bounds zone = ObtenirZoneDetectionSol();
+        return Physics2D.OverlapBox(zone.center, zone.size, 0f, coucheSol) != null;
+    }
+
+    private Bounds ObtenirZoneDetectionSol()
+    {
+        Bounds limites = collisionneur.bounds;
+        Vector2 centre = new Vector2(limites.center.x, limites.min.y - epaisseurDetectionSol / 2f);
+        Vector2 taille = new Vector2(limites.size.x * RatioLargeurDetectionSol, epaisseurDetectionSol);
+        return new Bounds(centre, taille);
+    }
+
+    private void MettreAJourAnimations()
+    {
+        animateur.SetFloat(ParametresAnimateur.Vitesse, Mathf.Abs(direction));
+        animateur.SetBool(ParametresAnimateur.AuSol, estAuSol);
+        animateur.SetFloat(ParametresAnimateur.VitesseY, corps.linearVelocity.y);
+    }
+
+    private void VerifierConfiguration()
+    {
+        if (coucheSol.value == 0)
+            Debug.LogWarning("PlayerMouvement : 'Couche Sol' est sur Nothing, le corbeau ne pourra jamais sauter.", this);
+
+        if (animateur == null)
+            Debug.LogError("PlayerMouvement : aucun Animator trouvé sur le corbeau ou ses enfants.", this);
+
+        if (rendu == null)
+            Debug.LogError("PlayerMouvement : aucun SpriteRenderer trouvé sur le corbeau ou ses enfants.", this);
     }
 
     private void OnDrawGizmosSelected()
     {
-        if (verificationSol == null) return;
+        if (collisionneur == null)
+            collisionneur = GetComponent<Collider2D>();
+
+        if (collisionneur == null) return;
+
+        Bounds zone = ObtenirZoneDetectionSol();
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(verificationSol.position, rayonSol);
+        Gizmos.DrawWireCube(zone.center, zone.size);
     }
 }
