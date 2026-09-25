@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 1794918125607238276}
   - component: {fileID: 8080311014950479496}
   - component: {fileID: 6223446867881550118}
+  - component: {fileID: -5975518062133134772}
+  - component: {fileID: 8736828247555706790}
   m_Layer: 0
   m_Name: InfectedSheep
   m_TagString: Enemy
@@ -118,7 +120,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &8080311014950479496
 BoxCollider2D:
@@ -184,3 +186,40 @@ MonoBehaviour:
   hasBeenInspected: 0
   remedyPrefab: {fileID: 5793607339190382869, guid: 65b4bdf706f9dd949aa44628106ec65e, type: 3}
   inspectPromptUI: {fileID: 0}
+--- !u!95 &-5975518062133134772
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6665297460167297090}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 52f44db6f87acf54b86c9e9362b7406e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8736828247555706790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6665297460167297090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be27bf34c2e184d9ec96bf65a4023e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  moveSpeed: 1.5
+  walkDuration: 3
+  idleDuration: 2
