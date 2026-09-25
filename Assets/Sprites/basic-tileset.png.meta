@@ -1,0 +1,734 @@
+fileFormatVersion: 2
+guid: 024bf5e0c9e7bce4183131569bd396a8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3238069393075459763
+    second: basic-tileset_0
+  - first:
+      213: -8074752008808938239
+    second: basic-tileset_1
+  - first:
+      213: -8809569724280282746
+    second: basic-tileset_2
+  - first:
+      213: 1534806637774124294
+    second: basic-tileset_3
+  - first:
+      213: 4042541952042561980
+    second: basic-tileset_4
+  - first:
+      213: -7654754853912332746
+    second: basic-tileset_5
+  - first:
+      213: 2897230864647146409
+    second: basic-tileset_6
+  - first:
+      213: 6497129800155424078
+    second: basic-tileset_7
+  - first:
+      213: -1933207388500697357
+    second: basic-tileset_8
+  - first:
+      213: 5487786219388792220
+    second: basic-tileset_9
+  - first:
+      213: -6059179114334191616
+    second: basic-tileset_10
+  - first:
+      213: 5634634860154524228
+    second: basic-tileset_11
+  - first:
+      213: -5627084379551972741
+    second: basic-tileset_12
+  - first:
+      213: -1032052186507630405
+    second: basic-tileset_13
+  - first:
+      213: -5008559778872526853
+    second: basic-tileset_14
+  - first:
+      213: -6601365430692971714
+    second: basic-tileset_15
+  - first:
+      213: -4946813665599952531
+    second: basic-tileset_16
+  - first:
+      213: 6761117959957282014
+    second: basic-tileset_17
+  - first:
+      213: -1546530719384931046
+    second: basic-tileset_18
+  - first:
+      213: -4434962682278603355
+    second: basic-tileset_19
+  - first:
+      213: -6081157689678073586
+    second: basic-tileset_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: basic-tileset_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 201
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b6d35cf4feefec20800000000000000
+      internalID: 3238069393075459763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basic-tileset_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 144
+        width: 99
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 105429174d7b0ff80800000000000000
+      internalID: -8074752008808938239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basic-tileset_2
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 201
+        width: 68
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 681ec38c20f1eb580800000000000000
+      internalID: -8809569724280282746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basic-tileset_3
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 185
+        width: 26
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 605307b518abc4510800000000000000
+      internalID: 1534806637774124294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basic-tileset_4
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 145
+        width: 36
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb17c11bc7ef91830800000000000000
+      internalID: 4042541952042561980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basic-tileset_5
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 145
+        width: 78
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 636bbd95409d4c590800000000000000
+      internalID: -7654754853912332746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basic-tileset_6
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 145
+        width: 58
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ab47970f18053820800000000000000
+      internalID: 2897230864647146409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basic-tileset_7
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 146
+        width: 32
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e456ed541217a2a50800000000000000
+      internalID: 6497129800155424078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basic-tileset_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 93
+        width: 152
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fe514b6f1edb25e0800000000000000
+      internalID: -1933207388500697357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basic-tileset_9
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 94
+        width: 26
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9de3f1bd78882c40800000000000000
+      internalID: 5487786219388792220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basic-tileset_10
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 92
+        width: 24
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00005abc2b879eba0800000000000000
+      internalID: -6059179114334191616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basic-tileset_11
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 93
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4421b8e3d8e323e40800000000000000
+      internalID: 5634634860154524228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basic-tileset_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 47
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b72c7a3029498e1b0800000000000000
+      internalID: -5627084379551972741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basic-tileset_13
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 47
+        width: 23
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb82c81210a6da1f0800000000000000
+      internalID: -1032052186507630405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basic-tileset_14
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 47
+        width: 22
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf77ef7ea650e7ab0800000000000000
+      internalID: -5008559778872526853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basic-tileset_15
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 47
+        width: 27
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3b7007cd1d3364a0800000000000000
+      internalID: -6601365430692971714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basic-tileset_16
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 47
+        width: 110
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d69edd33e23695bb0800000000000000
+      internalID: -4946813665599952531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basic-tileset_17
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 4
+        width: 33
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edc74cf66f054dd50800000000000000
+      internalID: 6761117959957282014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basic-tileset_18
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 4
+        width: 24
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a15f4dc218e998ae0800000000000000
+      internalID: -1546530719384931046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basic-tileset_19
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 4
+        width: 22
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a59baa10f8d372c0800000000000000
+      internalID: -4434962682278603355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basic-tileset_20
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 4
+        width: 37
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e017a93fc436b9ba0800000000000000
+      internalID: -6081157689678073586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basic-tileset_21
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 4
+        width: 25
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25b166bf8090882418ab7b71e8b90ec9
+      internalID: -624908303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basic-tileset_22
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 4
+        width: 39
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb956d3c3e8bc5244a1e9afa42909812
+      internalID: 1993420741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basic-tileset_23
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 7
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a80e663dc133f6a478a1b803a2cde2ee
+      internalID: 527183527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 8a8f8aac909013245a8390d34fa88a86
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":150.0,"y":150.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      basic-tileset_0: 3238069393075459763
+      basic-tileset_1: -8074752008808938239
+      basic-tileset_10: -6059179114334191616
+      basic-tileset_11: 5634634860154524228
+      basic-tileset_12: -5627084379551972741
+      basic-tileset_13: -1032052186507630405
+      basic-tileset_14: -5008559778872526853
+      basic-tileset_15: -6601365430692971714
+      basic-tileset_16: -4946813665599952531
+      basic-tileset_17: 6761117959957282014
+      basic-tileset_18: -1546530719384931046
+      basic-tileset_19: -4434962682278603355
+      basic-tileset_2: -8809569724280282746
+      basic-tileset_20: -6081157689678073586
+      basic-tileset_21: -624908303
+      basic-tileset_22: 1993420741
+      basic-tileset_23: 527183527
+      basic-tileset_3: 1534806637774124294
+      basic-tileset_4: 4042541952042561980
+      basic-tileset_5: -7654754853912332746
+      basic-tileset_6: 2897230864647146409
+      basic-tileset_7: 6497129800155424078
+      basic-tileset_8: -1933207388500697357
+      basic-tileset_9: 5487786219388792220
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
