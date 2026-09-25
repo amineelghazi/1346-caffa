@@ -1,79 +1,85 @@
-# 1346 – Caffa / mini-projet2D
-**Date de début :** 16 septembre 2026
+[Français](README.fr.md) | English
 
-**Type de jeu :** Plateformeur 2D (2D Platformer)
+# 1346 – Caffa
 
----
+Mini-project 2D — Platformer
 
-## Partie 1 – Histoire du jeu
+Start date: September 16, 2026
 
-Nous sommes en 1346, au début de la peste noire (*Black Death*). Certains animaux sont infectés, mais le joueur ne connaît pas l'état de santé de chacun.
+Game type: 2D Platformer
 
-Le personnage principal est un médecin de renom dont l'objectif est de sauver les humains et les animaux. Certains animaux sont passifs, d'autres risquent de l'attaquer. Le médecin ne souhaite pas les éliminer, mais s'il n'a pas le choix, il le fera à l'aide de son arme.
+## Table of Contents
 
-Au détriment de sa propre santé, il parcourt l'Europe à la recherche de soins pour guérir les autres. Au lieu de se protéger et de s'éloigner de la propagation de la maladie, il refuse de cesser d'aider son prochain : médecin depuis longtemps, il ira au cœur de l'épidémie, au siège de **Caffa**, en Crimée.
+- [Story](#story)
+- [Main Features](#main-features)
+- [Architecture (scripts & objects)](#architecture-scripts--objects)
+- [Credits & Sources](#credits--sources)
+- [License and Author](#license-and-author)
 
-Muni seulement d'une épée et d'un fusil tranquillisant, il conserve son humanité et protège les siens d'un malheur inconnu.
+## Story
 
----
+The year is 1346, at the dawn of the Black Death. Some animals are infected, but the player has no way of knowing the health status of each one.
 
-## Partie 2 – Fonctionnalités principales
+The main character is a renowned physician whose goal is to save both humans and animals. Some animals are passive, while others may attack him. The physician has no wish to kill them, but if left with no choice, he will use his weapon.
 
-1. **Inspection des animaux** lorsque le personnage est suffisamment proche d'eux.
-2. **Affichage d'un message** dans la console ou dans l'interface (UI) lors de l'inspection d'un animal.
-3. **Combat à l'épée** : le médecin peut éliminer les ennemis.
-4. **Fusil tranquillisant** : permet de faire tomber les oiseaux trop hauts afin de les inspecter.
-5. **Contamination progressive** : le personnage devient de plus en plus contaminé à mesure qu'il avance.
-6. **Objets de soins** : permettent de réinitialiser l'état de contamination ou de réduire la maladie après un certain nombre d'animaux infectés par la peste noire éliminés.
-7. **Obstacles** : des obstacles visibles (murs, etc.) bloquent le passage, le personnage utilise donc sa capacité de saut.
-8. **Deux catégories d'animaux terrestres malades** : agressifs et inoffensifs. Le joueur choisit de les sauver ou de les éliminer.
-9. **Déplacement du joueur** régulier, avec animations de course et de saut.
-10. **Déplacement automatique** des animaux sauvages, des oiseaux, etc.
+At the expense of his own health, he travels across Europe searching for cures to heal others. Rather than protecting himself and fleeing the spread of the disease, he refuses to stop helping his fellow man: a long-serving physician, he heads straight into the heart of the epidemic, to the siege of Caffa, in Crimea.
 
----
+Armed with nothing but a sword and a tranquilizer gun, he holds onto his humanity while protecting others from an unknown misfortune.
 
-## Partie 3 – Logique métier (scripts) et objets
+## Main Features
 
-| # | Script / Objet | Rôle |
-|---|----------------|------|
-| 1 | `GameManager` | Gestion globale du jeu |
-| 2 | `PlayerController` | Mouvement du joueur |
-| 3 | `PlayerHealth` | Gestion de la barre de vie |
-| 4 | `PlayerWeapons` | Épée ou fusil / changement d'arme |
-| 5 | `PlayerInspectAnimal` | Inspection des animaux |
-| 6 | `AnimalPassive` | Comportement des animaux inoffensifs |
-| 7 | `AnimalAggresive` | Comportement des animaux agressifs |
-| 8 | `AnimalHealth` | Santé / état d'infection des animaux |
-| 9 | `WallObject` | Obstacles infranchissables |
-| 10 | `PotionObject` | Objets de soins |
-| 11 | `DangerZone` | Zones de danger / contamination |
+- Animal inspection when the character gets close enough to them
+- On-screen message in the console or UI when inspecting an animal
+- Sword combat : the physician can eliminate enemies
+- Tranquilizer gun : brings down birds flying too high so they can be inspected
+- Progressive contamination : the character becomes increasingly infected as he advances
+- Healing items : reset the contamination level or reduce sickness after eliminating a certain number of plague-infected animals
+- Obstacles : visible obstacles (walls, etc.) block the path, requiring the character's jump ability
+- Two categories of sick land animals : aggressive and harmless — the player chooses to save or eliminate them
+- Player movement at a steady pace, with running and jumping animations
+- Automatic movement of wild animals, birds, etc.
 
----
+## Architecture (scripts & objects)
 
-## Sources et crédits
+| # | Script / Object | Role |
+|---|---|---|
+| 1 | `GameManager` | Overall game management |
+| 2 | `PlayerController` | Player movement |
+| 3 | `PlayerHealth` | Health bar management |
+| 4 | `PlayerWeapons` | Sword or gun / weapon switching |
+| 5 | `PlayerInspectAnimal` | Animal inspection |
+| 6 | `AnimalPassive` | Harmless animal behavior |
+| 7 | `AnimalAggresive` | Aggressive animal behavior |
+| 8 | `AnimalHealth` | Animal health / infection status |
+| 9 | `WallObject` | Impassable obstacles |
+| 10 | `PotionObject` | Healing items |
+| 11 | `DangerZone` | Danger / contamination zones |
 
-### Animaux
-- Ennemis (sprite sheets pixel art) : [Free Enemy Sprite Sheets – free-game-assets](https://free-game-assets.itch.io/free-enemy-sprite-sheets-pixel-art)
-- Mouton : [Pixel Sheep – gntldragon](https://gntldragon.itch.io/pixel-sheep)
-- Oiseau : [Pixel Art Bird 16x16 – ma9ici4n](https://ma9ici4n.itch.io/pixel-art-bird-16x16)
+## Credits & Sources
 
-### Personnage
-- [Plague Crow – gabry-corti](https://gabry-corti.itch.io/plague-crow)
-- [Platformer – kybernetik](https://kybernetik.itch.io/platformer)
+**Animals**
+- Enemies (pixel art sprite sheets): Free Enemy Sprite Sheets – free-game-assets
+- Sheep: Pixel Sheep – gntldragon
+- Bird: Pixel Art Bird 16x16 – ma9ici4n
 
-### Armes
-- Arme tranquillisante (oiseaux contaminés) : [Gun Assets – kaylousberg](https://kaylousberg.itch.io/gun-assets)
-- Arme historique : [Redacted Armory – mosleybrothersgames](https://mosleybrothersgames.itch.io/redacted-armory)
+**Character**
+- Plague Crow – gabry-corti
+- Platformer – kybernetik
 
-### Environnement
-- [Forest Nature Fantasy Tileset – theflavare](https://theflavare.itch.io/forest-nature-fantasy-tileset)
+**Weapons**
+- Tranquilizer gun (infected birds): Gun Assets – kaylousberg
+- Historical weapon: Redacted Armory – mosleybrothersgames
 
-### Contexte historique
-- [Propagation de la peste noire en Europe (1346-1353) – Wikipédia](https://en.wikipedia.org/wiki/Black_Death#/media/File:1346-1353_spread_of_the_Black_Death_in_Europe_map.svg)
+**Environment**
+- Forest Nature Fantasy Tileset – theflavare
 
-## Licence et Auteur
+**Historical Context**
+- Spread of the Black Death in Europe (1346-1353) – Wikipedia
 
-**Auteur :** Amine El Ghazi  
-Ce projet et son contenu sont la propriété exclusive d'Amine El Ghazi. Aucune réutilisation, copie, modification ou distribution n'est autorisée sans accord écrit préalable.
+## License and Author
 
-Copyright © 2026 Amine El Ghazi. Tous droits réservés.
+Author: Amine El Ghazi
+
+This project and its content are the exclusive property of Amine El Ghazi. No reuse, copying, modification, or distribution is permitted without prior written consent.
+
+Copyright © 2026 Amine El Ghazi. All rights reserved.
