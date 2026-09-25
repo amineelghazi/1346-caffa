@@ -1,4 +1,4 @@
-# 1346 – Caffa
+# 1346 – Caffa / mini-projet2D
 **Date de début :** 16 septembre 2026
 
 **Type de jeu :** Plateformeur 2D (2D Platformer)
