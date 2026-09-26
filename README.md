@@ -59,14 +59,15 @@ Armed with nothing but a sword and a tranquilizer gun, he holds onto his humanit
 
 **Animals**
 
-[- Enemies (pixel art sprite sheets): Free Enemy Sprite Sheets – free-game-assets](https://free-game-assets.itch.io/free-enemy-sprite-sheets-pixel-art)
-[- Sheep: Pixel Sheep – gntldragon](https://gntldragon.itch.io/pixel-sheep)
-[- Bird: Pixel Art Bird 16x16 – ma9ici4n](https://ma9ici4n.itch.io/pixel-art-bird-16x16)
+Enemies : [- Enemies (pixel art sprite sheets): Free Enemy Sprite Sheets – free-game-assets](https://free-game-assets.itch.io/free-enemy-sprite-sheets-pixel-art) & [- Platformer – kybernetik](https://kybernetik.itch.io/platformer)
+
+Sheep : [- Sheep: Pixel Sheep – gntldragon](https://gntldragon.itch.io/pixel-sheep)
+
+Bird : [- Bird: Pixel Art Bird 16x16 – ma9ici4n](https://ma9ici4n.itch.io/pixel-art-bird-16x16)
 
 **Character**
 
-[- Plague Crow – gabry-corti](https://gabry-corti.itch.io/plague-crow)
-[- Platformer – kybernetik](https://kybernetik.itch.io/platformer)
+Player : [- Plague Crow – gabry-corti](https://gabry-corti.itch.io/plague-crow)
 
 **Environment**
 
