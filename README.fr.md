@@ -57,24 +57,21 @@ Muni seulement d'une épée et d'un fusil tranquillisant, il conserve son humani
 
 ## Crédits & sources
 
-**Animaux**
-- Ennemis (sprite sheets pixel art) : Free Enemy Sprite Sheets – free-game-assets
-- Mouton : Pixel Sheep – gntldragon
-- Oiseau : Pixel Art Bird 16x16 – ma9ici4n
+**Animals** 
 
-**Personnage**
-- Plague Crow – gabry-corti
-- Platformer – kybernetik
+[- Enemies (pixel art sprite sheets): Free Enemy Sprite Sheets – free-game-assets - Sheep: Pixel Sheep – gntldragon - Bird: Pixel Art Bird 16x16 – ma9ici4n](https://free-game-assets.itch.io/free-enemy-sprite-sheets-pixel-art)
 
-**Armes**
-- Arme tranquillisante (oiseaux contaminés) : Gun Assets – kaylousberg
-- Arme historique : Redacted Armory – mosleybrothersgames
+**Character** 
 
-**Environnement**
-- Forest Nature Fantasy Tileset – theflavare
+[- Plague Crow – gabry-corti - Platformer – kybernetik](https://gabry-corti.itch.io/plague-crow)
 
-**Contexte historique**
-- Propagation de la peste noire en Europe (1346-1353) – Wikipédia
+**Environment** 
+
+[- Forest Nature Fantasy Tileset – theflavare](https://theflavare.itch.io/forest-nature-fantasy-tileset)
+
+**Historical Context** 
+
+[- Spread of the Black Death in Europe (1346-1353) – Wikipedia](https://en.wikipedia.org/wiki/Black_Death#/media/File:1346-1353_spread_of_the_Black_Death_in_Europe_map.svg)
 
 ## Licence et Auteur
 
