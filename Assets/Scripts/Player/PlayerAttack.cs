@@ -8,9 +8,12 @@ public class PlayerAttack : MonoBehaviour
     public float degats = 1f;             // Damage per hit
     public LayerMask layerEnnemis;        // Set to "Enemy" layer
 
-    [Header("Input & Animation")]
-    [Tooltip("Change key so Space remains strictly for Jumping")]
-    public KeyCode toucheAttaque = KeyCode.F; // Use 'F' or KeyCode.Mouse0 for Left-Click
+    [Header("Input Controls")]
+    public KeyCode toucheAttaqueMelee = KeyCode.F;     // Touche F pour le coup au cac
+    public KeyCode toucheTir = KeyCode.Mouse0;           // Clic Gauche pour tirer
+    public KeyCode toucheEquiperArme = KeyCode.E;       // Touche E pour sortir/ranger l'arme
+
+    [Header("Animation")]
     public Animator animator;
 
     private void Start()
@@ -21,25 +24,48 @@ public class PlayerAttack : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(toucheAttaque))
+        if (animator == null) return;
+
+        // 1. Sortir ou ranger l'arme (Touche E)
+        if (Input.GetKeyDown(toucheEquiperArme))
         {
-            TriggerAttackAnimation();
+            ToggleGun();
+        }
+
+        bool hasGun = animator.GetBool("HasGun");
+
+        // 2. Attaque corps-à-corps (Touche F) : possible quand l'arme N'EST PAS équipée
+        if (Input.GetKeyDown(toucheAttaqueMelee) && !hasGun)
+        {
+            TriggerMeleeAttack();
+        }
+
+        // 3. Tir au pistolet (Clic Gauche) : possible UNIQUEMENT si l'arme EST équipée
+        if (Input.GetKeyDown(toucheTir) && hasGun)
+        {
+            TriggerShootAnimation();
         }
     }
 
-    private void TriggerAttackAnimation()
+    private void ToggleGun()
     {
-        // Triggers the transition to the Attack state in Animator
-        if (animator != null)
-        {
-            animator.SetTrigger("Attack");
-        }
+        // Inverse la valeur actuelle de HasGun dans l'Animator
+        bool currentHasGun = animator.GetBool("HasGun");
+        animator.SetBool("HasGun", !currentHasGun);
+    }
 
-        
+    private void TriggerMeleeAttack()
+    {
+        animator.SetTrigger("Attack");
         PerformHitCheck();
     }
 
-    // Call this via an Animation Event on the exact swing frame!
+    private void TriggerShootAnimation()
+    {
+        animator.SetTrigger("Shoot");
+    }
+
+    // Call this via an Animation Event on the exact swing frame
     public void PerformHitCheck()
     {
         if (pointDAttaque == null) return;

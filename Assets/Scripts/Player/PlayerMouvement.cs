@@ -8,14 +8,12 @@ public class PlayerMouvement : MonoBehaviour
         public static readonly int Vitesse = Animator.StringToHash("Speed");        // float
         public static readonly int AuSol = Animator.StringToHash("IsGrounded");     // bool
         public static readonly int VitesseY = Animator.StringToHash("VelocityY");   // float
-        public static readonly int Attaque = Animator.StringToHash("Attack");       // trigger
         public static readonly int Degats = Animator.StringToHash("Damage");        // trigger
         public static readonly int Mort = Animator.StringToHash("Death");           // trigger
     }
 
     private const string AxeHorizontal = "Horizontal";
     private const string BoutonSaut = "Jump";
-    private const string BoutonAttaque = "Fire1";
     private const float RatioLargeurDetectionSol = 0.9f;
 
     [Header("Déplacement")]
@@ -89,12 +87,6 @@ public class PlayerMouvement : MonoBehaviour
     {
         // Lecture de la direction de déplacement
         direction = Input.GetAxisRaw(AxeHorizontal);
-
-        // Attaque
-        if (Input.GetButtonDown(BoutonAttaque))
-        {
-            animateur.SetTrigger(ParametresAnimateur.Attaque);
-        }
 
         // Saut
         if (Input.GetButtonDown(BoutonSaut))
