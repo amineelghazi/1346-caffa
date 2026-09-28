@@ -1,5 +1,8 @@
 [Français](README.fr.md) | English
 
+<img width="1360" height="543" alt="image" src="https://github.com/user-attachments/assets/1e7fa17f-d82f-471a-b51a-6765631db998" />
+
+
 # 1346 – Caffa
 
 Mini-project 2D — Platformer
@@ -43,17 +46,18 @@ Armed with nothing but a sword and a tranquilizer gun, he holds onto his humanit
 
 | # | Script / Object | Role |
 |---|---|---|
-| 1 | `GameManager` | Overall game management |
-| 2 | `PlayerController` | Player movement |
-| 3 | `PlayerHealth` | Health bar management |
-| 4 | `PlayerWeapons` | Sword or gun / weapon switching |
-| 5 | `PlayerInspectAnimal` | Animal inspection |
-| 6 | `AnimalPassive` | Harmless animal behavior |
-| 7 | `AnimalAggresive` | Aggressive animal behavior |
-| 8 | `AnimalHealth` | Animal health / infection status |
-| 9 | `WallObject` | Impassable obstacles |
-| 10 | `PotionObject` | Healing items |
-| 11 | `DangerZone` | Danger / contamination zones |
+| 1 | `SuiviCamera` | Overall Camera Management |
+| 2 | `HyenaAi` | Hyena automatic movement |
+| 3 | `HyenaHealth` | Health bar management |
+| 4 | `SheepAi` | Sheep automatic movement & ground detection |
+| 5 | `EffectParallaxe` | Parallax Effect of the background|
+| 6 | `NextLevel` | Door object loading second level on interaction|
+| 7 | `InfectedAnimal` | Infected animals drop health potions on death |
+| 8 | `PlagueRemedy` | Potion effect, health restored, infection reduced |
+| 9 | `PlayerAttack` | Melee Attack, KeyCode, Damage on enemies|
+| 10 | `PlayerHealth` | Manage Player Health & death |
+| 11 | `PlayerInfection` | Manage Player Sickness|
+| 12 | `PlayerMouvement` | WASD / ↑ → ↓ ← / Sprite Orientation|
 
 ## Credits & Sources
 
