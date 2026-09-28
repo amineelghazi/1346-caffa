@@ -16,6 +16,11 @@ public class PlayerMouvement : MonoBehaviour
     private const string BoutonSaut = "Jump";
     private const float RatioLargeurDetectionSol = 0.9f;
 
+    [Header("Respawn")]
+    [SerializeField] private float hauteurLimiteChute = -10f;
+
+    private Vector3 positionDepart;
+
     [Header("Déplacement")]
     [SerializeField] private float vitesse = 5f;
     [SerializeField] private float forceSaut = 10f;
@@ -45,6 +50,8 @@ public class PlayerMouvement : MonoBehaviour
         animateur = GetComponentInChildren<Animator>();
         rendu = GetComponentInChildren<SpriteRenderer>();
 
+        positionDepart = transform.position;
+
         VerifierConfiguration();
     }
 
@@ -61,8 +68,20 @@ public class PlayerMouvement : MonoBehaviour
     {
         if (estMort) return;
 
+        if (transform.position.y < hauteurLimiteChute)
+        {
+            Respawn();
+            return;
+        }
+
         estAuSol = DetecterSol();
         AppliquerMouvement();
+    }
+
+    private void Respawn()
+    {
+        transform.position = positionDepart;
+        corps.linearVelocity = Vector2.zero;
     }
 
     // À appeler depuis d'autres scripts (ennemis, pièges...)

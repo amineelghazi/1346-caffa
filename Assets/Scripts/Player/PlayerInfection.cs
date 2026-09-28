@@ -7,20 +7,19 @@ public class PlayerInfection : MonoBehaviour
     public float infectionMax = 100f;
     public float infectionActuelle;
 
-    [Tooltip("Nombre de points d'infection gagnés par mètre parcouru")]
-    public float infectionParMetre = 0.5f;
+    // NEW : remplace infectionParMetre
+    [Tooltip("Points d'infection gagnés par seconde. Temps avant la mort = Infection Max / cette valeur (ex : 100 / 0.5 = 200 secondes).")]
+    public float infectionParSeconde = 0.5f;
 
     [Header("Interface Visuelle")]
     [Tooltip("Glisse le Slider d'Infection ici")]
     public Slider barreDeMaladie;
 
-    private Vector3 dernierePosition;
     private PlayerHealth santeJoueur;
 
     private void Start()
     {
         infectionActuelle = 0f;
-        dernierePosition = transform.position;
         santeJoueur = GetComponent<PlayerHealth>();
 
         if (barreDeMaladie != null)
@@ -32,14 +31,11 @@ public class PlayerInfection : MonoBehaviour
 
     private void Update()
     {
-        float distanceParcourue = Vector3.Distance(transform.position, dernierePosition);
+        // NEW : l'infection monte avec le temps, que le joueur bouge ou non.
+        // On arrête une fois au maximum (évite de répéter le message et la mort à chaque frame).
+        if (infectionActuelle >= infectionMax) return;
 
-        if (distanceParcourue > 0.001f)
-        {
-            AugmenterInfection(distanceParcourue * infectionParMetre);
-        }
-
-        dernierePosition = transform.position;
+        AugmenterInfection(infectionParSeconde * Time.deltaTime);
     }
 
     public void AugmenterInfection(float montant)
