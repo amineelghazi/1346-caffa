@@ -5,7 +5,7 @@
 
 # 1346 – Caffa
 
-Mini-project 2D — Platformer
+Mini-project 2D - Platformer
 
 Start date: September 16, 2026
 
