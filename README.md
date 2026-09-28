@@ -63,23 +63,23 @@ Armed with nothing but a sword and a tranquilizer gun, he holds onto his humanit
 
 **Animals**
 
-Enemies : [- Enemies (pixel art sprite sheets): Free Enemy Sprite Sheets – free-game-assets](https://free-game-assets.itch.io/free-enemy-sprite-sheets-pixel-art) & [- Platformer – kybernetik](https://kybernetik.itch.io/platformer)
+Enemies : [Enemies (pixel art sprite sheets): Free Enemy Sprite Sheets – free-game-assets](https://free-game-assets.itch.io/free-enemy-sprite-sheets-pixel-art) & [Platformer – kybernetik](https://kybernetik.itch.io/platformer)
 
-Sheep : [- Sheep: Pixel Sheep – gntldragon](https://gntldragon.itch.io/pixel-sheep)
+Sheep : [Sheep: Pixel Sheep – gntldragon](https://gntldragon.itch.io/pixel-sheep)
 
-Bird : [- Bird: Pixel Art Bird 16x16 – ma9ici4n](https://ma9ici4n.itch.io/pixel-art-bird-16x16)
+Bird : [Bird: Pixel Art Bird 16x16 – ma9ici4n](https://ma9ici4n.itch.io/pixel-art-bird-16x16)
 
 **Character**
 
-Player : [- Plague Crow – gabry-corti](https://gabry-corti.itch.io/plague-crow)
+Player : [Plague Crow – gabry-corti](https://gabry-corti.itch.io/plague-crow)
 
 **Environment**
 
-[- Forest Nature Fantasy Tileset – theflavare](https://theflavare.itch.io/forest-nature-fantasy-tileset)
+[Forest Nature Fantasy Tileset – theflavare](https://theflavare.itch.io/forest-nature-fantasy-tileset)
 
 **Historical Context**
 
-[- Spread of the Black Death in Europe (1346-1353) – Wikipedia](https://en.wikipedia.org/wiki/Black_Death#/media/File:1346-1353_spread_of_the_Black_Death_in_Europe_map.svg)
+[Spread of the Black Death in Europe (1346-1353) – Wikipedia](https://en.wikipedia.org/wiki/Black_Death#/media/File:1346-1353_spread_of_the_Black_Death_in_Europe_map.svg)
 
 ## License and Author
 
