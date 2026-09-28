@@ -1311,6 +1311,10 @@ PrefabInstance:
       value: Crow
       objectReference: {fileID: 0}
     - target: {fileID: -2253911629886400664, guid: 0887048116dab80488b736f5ea64e7d2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: 0887048116dab80488b736f5ea64e7d2, type: 3}
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
@@ -3326,7 +3330,8 @@ GameObject:
   - component: {fileID: 1414440145}
   - component: {fileID: 1414440144}
   - component: {fileID: 1414440149}
-  m_Layer: 0
+  - component: {fileID: 1414440150}
+  m_Layer: 6
   m_Name: Hyena_0
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -3345,16 +3350,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bb84a70ced7ea44aae9911ebef4b240, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HyenaIA
-  vitessePatrouille: 1.5
+  vitessePatrouille: 1
   vitessePoursuite: 3.5
   distancePatrouille: 4
   rayonDetection: 9
   rayonAbandon: 9
   degats: 10
-  porteeAttaque: 1.2
-  dureeAttaque: 0.6
+  debugAttaque: 0
+  porteeAttaque: 0.3
+  dureeAttaque: 0.5
   delaiDegats: 0.25
-  delaiEntreAttaques: 1.5
+  delaiEntreAttaques: 0.5
   coucheSol:
     serializedVersion: 2
     m_Bits: 8
@@ -3393,7 +3399,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.021161437, y: -0.017019808}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3403,7 +3409,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.15625, y: 0.90625}
+  m_Size: {x: 1.0208135, y: 0.8636999}
   m_EdgeRadius: 0
 --- !u!50 &1414440146
 Rigidbody2D:
@@ -3527,6 +3533,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1414440150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414440143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4292bab6d5777ef428f8fdf025b54d1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HyeneHealth
+  santeMax: 30
+  delaiAvantDestruction: 0.5
+  couleurDegats: {r: 1, g: 0, b: 0, a: 1}
+  dureeFlash: 0.2
 --- !u!1 &1442160770
 GameObject:
   m_ObjectHideFlags: 0
@@ -4069,7 +4091,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -4364,6 +4386,7 @@ MonoBehaviour:
   santeMax: 100
   santeActuelle: 100
   barreDeSante: {fileID: 323282492}
+  delaiAvantRedemarrage: 2
 --- !u!114 &1755480664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4378,7 +4401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInfection
   infectionMax: 100
   infectionActuelle: 0
-  infectionParMetre: 0.5
+  infectionParSeconde: 3
   barreDeMaladie: {fileID: 1498761981}
 --- !u!114 &1755480665
 MonoBehaviour:
@@ -4394,10 +4417,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
   pointDAttaque: {fileID: 481911439}
   rayonDAttaque: 0.5
-  degats: 1
+  degats: 5
   layerEnnemis:
     serializedVersion: 2
     m_Bits: 64
+  delaiEntreAttaques: 0.5
+  delaiCoup: 0
+  frappeParEvenementAnimation: 0
+  orienterPointAutomatiquement: 1
   toucheAttaqueMelee: 102
   toucheTir: 323
   toucheEquiperArme: 0

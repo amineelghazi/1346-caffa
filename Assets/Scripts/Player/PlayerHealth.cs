@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement; // NEW
 using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
@@ -11,8 +12,16 @@ public class PlayerHealth : MonoBehaviour
     [Tooltip("Glisse le Slider de Santé ici")]
     public Slider barreDeSante;
 
+    // NEW
+    [Header("Mort")]
+    [Tooltip("Temps d'attente (en secondes) avant de relancer le niveau. Laisse le temps à l'animation de mort de se jouer.")]
+    public float delaiAvantRedemarrage = 2f;
+
     private PlayerMouvement joueurMouvement;
     private bool estMort = false;
+
+    // NEW : permet aux autres scripts (ex : la hyène) de savoir si le joueur est mort
+    public bool EstMort => estMort;
 
     private void Start()
     {
@@ -73,5 +82,14 @@ public class PlayerHealth : MonoBehaviour
         {
             joueurMouvement.Mourir();
         }
+
+        // NEW : après l'animation de mort, on relance le niveau depuis le début
+        Invoke(nameof(RedemarrerNiveau), delaiAvantRedemarrage);
+    }
+
+    // NEW
+    private void RedemarrerNiveau()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

@@ -27,7 +27,10 @@ public class HyeneIA : MonoBehaviour
     [Header("Attaque")]
     [Tooltip("Points de vie retirés au joueur à chaque morsure.")]
     [SerializeField] private float degats = 10f;
-    [SerializeField] private float porteeAttaque = 1.2f;
+    [Tooltip("Affiche dans la Console si chaque morsure touche ou rate (pour déboguer).")]
+    [SerializeField] private bool debugAttaque = false;
+    [Tooltip("Distance entre les bords de la hyène et du joueur (pas entre les centres). Ex : 0.5")]
+    [SerializeField] private float porteeAttaque = 0.5f;
     [SerializeField] private float dureeAttaque = 0.6f;
     [Tooltip("Délai entre le début de l'animation et le moment où le coup touche.")]
     [SerializeField] private float delaiDegats = 0.25f;
@@ -47,6 +50,7 @@ public class HyeneIA : MonoBehaviour
 
     private Transform joueur;
     private PlayerHealth santeJoueur;
+    private Collider2D colliderJoueur;
 
     private Etat etat = Etat.Patrouille;
     private float direction = 1f;
@@ -72,7 +76,13 @@ public class HyeneIA : MonoBehaviour
         if (objetJoueur != null)
         {
             joueur = objetJoueur.transform;
-            santeJoueur = objetJoueur.GetComponent<PlayerHealth>();
+            santeJoueur = objetJoueur.GetComponentInParent<PlayerHealth>();
+            colliderJoueur = objetJoueur.GetComponentInChildren<Collider2D>();
+
+            if (santeJoueur == null)
+                Debug.LogError("HyeneIA : aucun PlayerHealth trouvé sur l'objet tagué 'Player' : la hyène ne pourra pas faire de dégâts.", this);
+            if (colliderJoueur == null)
+                Debug.LogWarning("HyeneIA : aucun Collider2D trouvé sur le joueur.", this);
         }
         else
         {
@@ -128,17 +138,24 @@ public class HyeneIA : MonoBehaviour
         }
 
         float ecartX = joueur.position.x - transform.position.x;
-        direction = ecartX >= 0f ? 1f : -1f;
+
+        // Petite zone morte pour éviter de pivoter sans arrêt quand le joueur est pile au-dessus
+        if (Mathf.Abs(ecartX) > 0.1f)
+        {
+            direction = ecartX >= 0f ? 1f : -1f;
+        }
+
+        float distance = DistanceAuJoueur();
 
         // Assez près (et attaque disponible) : on attaque
-        if (Mathf.Abs(ecartX) <= porteeAttaque && Time.time >= prochaineAttaque)
+        if (distance <= porteeAttaque && Time.time >= prochaineAttaque)
         {
             CommencerAttaque();
             return;
         }
 
         // Assez près mais en cooldown : on reste face au joueur sans avancer
-        if (Mathf.Abs(ecartX) <= porteeAttaque || MurDevant() || VideDevant())
+        if (distance <= porteeAttaque || MurDevant() || VideDevant())
         {
             Deplacer(0f);
             return;
@@ -156,8 +173,15 @@ public class HyeneIA : MonoBehaviour
         {
             degatsInfliges = true;
 
-            if (joueur != null && santeJoueur != null &&
-                Vector2.Distance(transform.position, joueur.position) <= porteeAttaque * 1.3f)
+            float distanceCoup = DistanceAuJoueur();
+            float porteeMax = porteeAttaque + 0.3f;
+            bool touche = joueur != null && santeJoueur != null && distanceCoup <= porteeMax;
+
+            if (debugAttaque)
+                Debug.Log("Hyène : morsure " + (touche ? "TOUCHÉ" : "RATÉ") +
+                          " (écart " + distanceCoup.ToString("F2") + ", portée max " + porteeMax.ToString("F2") + ")", this);
+
+            if (touche)
             {
                 santeJoueur.PrendreDegats(degats);
             }
@@ -182,6 +206,22 @@ public class HyeneIA : MonoBehaviour
     }
 
     // ---------- Outils ----------
+
+    // Écart entre les BORDS de la hyène et du joueur (0 = ils se touchent ou se chevauchent).
+    // Calcul basé sur les bounds : indépendant de la matrice de collision et des triggers.
+    private float DistanceAuJoueur()
+    {
+        if (joueur == null) return float.MaxValue;
+        if (colliderJoueur == null) return Vector2.Distance(transform.position, joueur.position);
+
+        Bounds a = collisionneur.bounds;
+        Bounds b = colliderJoueur.bounds;
+
+        float dx = Mathf.Max(0f, Mathf.Abs(a.center.x - b.center.x) - (a.extents.x + b.extents.x));
+        float dy = Mathf.Max(0f, Mathf.Abs(a.center.y - b.center.y) - (a.extents.y + b.extents.y));
+
+        return Mathf.Sqrt(dx * dx + dy * dy);
+    }
 
     private void Deplacer(float vitesseX)
     {
