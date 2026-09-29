@@ -8,6 +8,8 @@ Date de début : 16 septembre 2026
 
 Type de jeu : Plateformeur 2D
 
+<img width="1360" height="543" alt="image" src="https://github.com/user-attachments/assets/1e7fa17f-d82f-471a-b51a-6765631db998" />
+
 ## Sommaire
 
 - [Histoire](#histoire)
